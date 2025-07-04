@@ -57,19 +57,36 @@ const CartPage = () => {
       )}
 
       <div className={styles.summary}>
-         <Button asChild variant="outline" className={styles.continueShopping}>
+        <div className={styles.summaryTop}>
+          <span className={styles.mobileTotalLabel}>TOTAL</span>
+          <span className={styles.mobileTotalPrice}>
+            {isClient ? totalPrice.toLocaleString() : totalPrice} EUR
+          </span>
+        </div>
+        <div className={styles.summaryBottom}>
+          <Button asChild variant="outline" className={styles.continueShopping}>
             <Link href="/">Continue Shopping</Link>
-         </Button>
-         {cartItems.length > 0 && (
-           <div className={styles.checkoutContainer}>
-              <p className={styles.totalPrice}>
-                  Total {isClient ? totalPrice.toLocaleString() : totalPrice} EUR
-              </p>
+          </Button>
+          {cartItems.length > 0 && (
+            <Button size="lg" className={styles.payButton}>
+              Pay
+            </Button>
+          )}
+        </div>
+        {cartItems.length > 0 && (
+          <div className={styles.checkoutContainer}>
+            <Button asChild variant="outline" className={styles.continueShopping}>
+              <Link href="/">Continue Shopping</Link>
+            </Button>
+            <div className={styles.desktopSummaryRight}>
+              <span className={styles.desktopTotalLabel}>TOTAL</span>
+              <span className={styles.desktopTotalPrice}>{isClient ? totalPrice.toLocaleString() : totalPrice} EUR</span>
               <Button size="lg" className={styles.payButton}>
-                  Pay
+                Pay
               </Button>
-           </div>
-         )}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -140,10 +140,6 @@
   position: relative;
 }
 
-.storageLabel:hover {
-  background-color: #f3f4f6;
-}
-
 .storageLabelSelected {
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
