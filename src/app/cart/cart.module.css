@@ -1,0 +1,160 @@
+.container {
+  padding-bottom: 8rem;
+}
+
+.heading {
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.cartTitle {
+  font-weight: 500;
+}
+
+.cartCount {
+  font-weight: 300;
+}
+
+.emptyCart {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cartItems {
+  border-top: 1px solid #e5e7eb;
+}
+
+.cartItem {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .cartItem {
+    gap: 3rem;
+  }
+}
+
+.itemImageContainer {
+  position: relative;
+  height: 8rem;
+  width: 8rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .itemImageContainer {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+.itemImage {
+  object-fit: contain;
+}
+
+.itemDetails {
+  flex-grow: 1;
+  padding-top: 0.5rem;
+}
+
+.itemName {
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.itemSpecs {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+}
+
+.itemPrice {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 1rem;
+}
+
+.removeButton {
+  color: hsl(var(--destructive));
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 1.5rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  text-decoration: underline;
+}
+
+.summary {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1920px;
+  background-color: white;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .summary {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.continueShopping {
+  border-radius: 0;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  height: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.checkoutContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.totalPrice {
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.payButton {
+  border-radius: 0;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  height: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
