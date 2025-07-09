@@ -1,0 +1,150 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    border-top: 1px solid #e5e7eb;
+    border-left: 1px solid #e5e7eb;
+}
+
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+.searchContainer {
+    position: relative;
+}
+
+.searchInput {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #d1d5db;
+    background-color: transparent;
+    padding: 0.5rem 0;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+.searchInput:focus-visible {
+    border-color: #000;
+    outline: none;
+    box-shadow: none;
+}
+
+.resultsBar {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resultsText {
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: .1em;
+    color: #6b7280;
+    text-transform: uppercase;
+}
+
+.error {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    color: #ef4444;
+}
+
+.skeletonCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1rem;
+    border-right: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.skeletonImageContainer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.skeletonImage {
+    height: 100%;
+    width: 100%;
+}
+
+.skeletonDetails {
+    padding-top: 1rem;
+}
+
+.skeletonInfo {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.skeletonName {
+    height: 1rem;
+    width: 50%;
+}
+
+.skeletonPrice {
+    height: 1rem;
+    width: 25%;
+}
+
+.skeletonDescription {
+    margin-top: 0.5rem;
+    height: 1rem;
+    width: 75%;
+}
+
+.noProducts {
+    grid-column: 1 / -1;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    border-right: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.noProductsTitle {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.noProductsText {
+    font-weight: 300;
+    color: #6b7280;
+}
